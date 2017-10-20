@@ -258,7 +258,7 @@ left:-250px;
             
         </video>
         <div class="poster hidden">
-            <img src="PATH_TO_JPEG" alt="">
+            <img src="" alt="">
         </div>
     </div>
 </div>
@@ -555,6 +555,7 @@ left:-250px;
 <script type="text/javascript" src="bootstrap/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="jquery.textillate.js"></script>
 <script type="text/javascript" src="jquery.fittext.js"></script>
+<script type="text/javascript" src="rot.js"></script>
 <script type="text/javascript" src="jquery.lettering.js"></script>
 <script type="text/javascript">
 	var i =1;
@@ -572,6 +573,18 @@ $("#im").animate({
 	height:'-=200px',
 	width:'-=200px'},2000);
 		});
+		$(".drap").rotate({
+  bind:
+  {
+    mouseover : function() {
+    $(this).rotate({animateTo:180})
+  },
+  mouseout : function() {
+    $(this).rotate({animateTo:0})
+    }
+  }
+
+});
 
 $("#im").click(function(){
 if(i==1){document.getElementById('im').src='moi1.jpg'; i++;}
